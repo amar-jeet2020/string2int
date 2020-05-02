@@ -1,0 +1,29 @@
+class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Please endter your string :");
+            string _strVlaue = Console.ReadLine()?.Trim();
+            _strVlaue = _strVlaue.Replace(" ", string.Empty);
+            string _outPutInt = string.Empty;
+            int i = 0;
+            //foreach (Char c in _strVlaue)
+            //{
+            //    if (Char.IsDigit(c))
+            //    {
+            //        _outPutInt += c;
+            //    }
+            //}
+
+            while (i < _strVlaue.Length)
+            {             
+                if (_strVlaue[i] >= '0' && _strVlaue[i] <= '9')
+                {
+                    _outPutInt += _strVlaue[i];
+                }
+                i++;
+            }
+            Console.Write("Out Put:" + _outPutInt);
+            Console.ReadLine();
+        }
+    }
